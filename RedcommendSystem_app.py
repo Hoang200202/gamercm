@@ -24,11 +24,11 @@ selected_game = ph.selectbox('Chọn 1 trong 787 game của Nintendo '
                              [''] + games_df['Title'].to_list(), key='default',
                              format_func=lambda x: 'Select a game' if x == '' else x)
 
-st.sidebar.markdown("# Want to know what's behind this app?")
-st.sidebar.markdown("Click on the button :point_down:")
-btn = st.sidebar.button("How this app works?")
+st.sidebar.markdown("# More info?")
+st.sidebar.markdown("Bấm nút dưới đây để tìm hiểu về app của chúng mình")
+btn = st.sidebar.button("Chi tiết")
 
-# Explanation with button 
+# Giải thích về các nút 
 if btn:
     selected_game = ph.selectbox('Select one among the 787 games ' \
                                  'from the menu: (you can type it as well)',
@@ -41,14 +41,14 @@ if btn:
     st.markdown('The recommendation system used in this app employs a series of algorithms based '
                 'on unsupervised learning techniques.')
 
-    # Scraping
+    # Phần cào dữ liệu
     st.markdown('## Web scraping')
     st.text('')
-    st.markdown('Beforehand, the dataset was obtained by scraping these two Wikipedia pages:')
+    st.markdown('Tập dữ liệu được lấy từ wikipedia:')
     st.markdown('* https://en.wikipedia.org/wiki/List_of_Nintendo_Switch_games_(Q%E2%80%93Z)')
-    st.markdown('I scraped the table entries which contain links to their video game pages. Then, '
-                'for each video game, I scraped either the Gameplay section, the Plot section, or both. '
-                'With this, I created the following dataframe:')
+    st.markdown('Cào dữ liệu từ bảng có chứa đường link đến từng game. Sau đó, '
+                'với mỗi đường link, chúng mình cào thêm dữ liệu về gameplay, nội dung, hoặc cả 2. '
+                'Sau đó chúng mình tạo ra được dataframe:')
     games_df
     st.markdown('Using [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), '
                 'the text scraping looks like this:')
@@ -71,27 +71,27 @@ for section in soup.find_all('h2'):
     else: pass
     """, language='python')
 
-    # Text Processing
+    # Xử lý văn bản
     st.markdown('## Text Processing')
-    st.markdown('Using [NLTK](https://www.nltk.org) for natural language processing, I defined '
-                'the rules for tokenizing and stemming the plots.')
+    st.markdown('Sử dụng [NLTK](https://www.nltk.org) để xử lý ngôn ngữ tự nhiên, '
+                'chuẩn hóa dữ liệu văn bản với tokenizing.')
     st.code(""" 
 def tokenize_and_stem(text):
     
-    # Tokenize by sentence, then by word
+    # Token hóa với câu rồi đến từng chữ
     tokens = [word for sent in nltk.sent_tokenize(text) 
               for word in nltk.word_tokenize(sent)]
     
-    # Filter out raw tokens to remove noise
+    # Khử nhiễu
     filtered_tokens = [token for token in tokens if re.search('[a-zA-Z]', token)]
     
-    # Stem the filtered_tokens
+    # Tối giản hóa
     stems = [stemmer.stem(word) for word in filtered_tokens]
     
     return stems    
     """, language='python')
 
-    # Vectorizing
+    # Vector hóa
     st.markdown('## Text vectorizing')
     st.markdown('I employ a [TF-IDF vectorizer](https://towardsdatascience.com/'
                 'natural-language-processing-feature-engineering-using-tf-idf-e8b9d00e7e76) '
@@ -107,7 +107,7 @@ tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=200000,
 tfidf_matrix = tfidf_vectorizer.fit_transform([x for x in games_df["Plots"]])
     """, language='python')
 
-    # Similarity distance
+    # Tính được khoảng cách độ tương đồng (Similarity Distance)
     st.markdown('## Similarity distance')
     st.markdown('Finally, the similarity distance of two texts is computed by substracting the '
                 'cosine of the two associated vectors from 1:')
