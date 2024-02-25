@@ -6,8 +6,8 @@ import textwrap
 # Load and Cache the data
 @st.cache_data(persist=True)
 def getdata():
-    games_df = pd.read_csv("D:/N4HK2/HTGY/GameRCM/datasets-20240125T131440Z-001/datasets/Games_dataset.csv", index_col=0)
-    similarity_df = pd.read_csv("D:/N4HK2/HTGY/GameRCM/datasets-20240125T131440Z-001/datasets/sim_matrix.csv", index_col=0)
+    games_df = pd.read_csv("Games_dataset.csv", index_col=0)
+    similarity_df = pd.read_csv("sim_matrix.csv", index_col=0)
     return games_df, similarity_df
 
 games_df, similarity_df = getdata()[0], getdata()[1]
@@ -15,7 +15,7 @@ games_df, similarity_df = getdata()[0], getdata()[1]
 # Sidebar
 st.sidebar.markdown('__Nintendo Switch game recommender__  \n Bài tập của nhóm 5  \n'
                     'Nông Minh Đức - Trịnh Việt Hoàng')
-st.sidebar.image('D:/N4HK2/HTGY/GameRCM/images-20240125T131411Z-001/images/banner.png', use_column_width=True)
+st.sidebar.image('banner.png', use_column_width=True)
 st.sidebar.markdown('# Chọn game của bạn!')
 st.sidebar.markdown('')
 ph = st.sidebar.empty()
