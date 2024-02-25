@@ -93,11 +93,11 @@ def tokenize_and_stem(text):
 
     # Vector hóa
     st.markdown('## Text vectorizing')
-    st.markdown('I employ a [TF-IDF vectorizer](https://towardsdatascience.com/'
+    st.markdown('Chúng mình dùng [TF-IDF vectorizer](https://towardsdatascience.com/'
                 'natural-language-processing-feature-engineering-using-tf-idf-e8b9d00e7e76) '
-                '(term frequency - inverse document frequency) to translate words into vectors. '
-                'The plots are then fit/transformed using this vectorizer. Along the way, '
-                'the `tokenize_and_stem` function is used, as well as a stop words remover.')
+                '(term frequency - inverse document frequency) để vector hóa văn bản. '
+                'Nội dung được vector hóa theo cách này. Theo đó, '
+                'hàm `tokenize_and_stem` sẽ được sử dụng, và loại bỏ các stop words.')
     st.code("""
 tfidf_vectorizer = TfidfVectorizer(max_df=0.8, max_features=200000,
                                  min_df=0.2, stop_words='english',
@@ -109,13 +109,12 @@ tfidf_matrix = tfidf_vectorizer.fit_transform([x for x in games_df["Plots"]])
 
     # Tính được khoảng cách độ tương đồng (Similarity Distance)
     st.markdown('## Similarity distance')
-    st.markdown('Finally, the similarity distance of two texts is computed by substracting the '
-                'cosine of the two associated vectors from 1:')
+
     st.code("""similarity_distance = 1 - cosine_similarity(tfidf_matrix)""", language='python')
     st.markdown('From this matrix, we can create a dataframe:')
     similarity_df
-    st.markdown('Then, once a game is selected, we query the top 5 most similar games '
-                'according to this table.')
+    st.markdown('Sau đó, khi đã chọn được game, ứng dụng sẽ gợi ý ra 5 game tương đồng '
+                'thông qua bảng này.')
 
 # Recommendations
 if selected_game:
@@ -150,7 +149,7 @@ else:
         st.text('')
         st.markdown("Trang web này sẽ gợi ý cho bạn 5 game của Nintendo "
                     'dựa trên nội dung, gameplay và những điều tương đồng khác để bạn chọn lựa!')
-        st.markdown('Thuật toán dựa trên xử lý ngôn ngữ tự nhiên và học không giám sát '
-                    'techniques &#151; click on the *__How this app works?__* button to know more!')
+        st.markdown('Thuật toán dựa trên xử lý ngôn ngữ tự nhiên và kĩ thuật học không giám sát '
+                    '; bấm *__Chi tiết?__* để biết thêm!')
         st.text('')
         st.warning(':point_left: Chọn 1 game từ menu!')
