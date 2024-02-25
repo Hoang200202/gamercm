@@ -145,12 +145,12 @@ else:
     else:
         st.markdown('# Nintendo Switch game recommender')
         st.text('')
-        st.markdown('> _So you have a Nintendo Switch, just finished an amazing game, and would like '
-                    'to get recommendations for similar games?_')
+        st.markdown('> _Bạn có trên tay Nintendo Switch, chơi xong 1 con game thú vị '
+                    'và muốn gợi ý 1 game tương tự?_')
         st.text('')
-        st.markdown("This app lets you select a game from the dropdown menu and you'll get five "
-                    'recommendations that are the closest to your game according to the gameplay and/or plot.')
-        st.markdown('The algorithm is based on natural language processing and unsupervised learning '
+        st.markdown("Trang web này sẽ gợi ý cho bạn 5 game của Nintendo "
+                    'dựa trên nội dung, gameplay và những điều tương đồng khác để bạn chọn lựa!')
+        st.markdown('Thuật toán dựa trên xử lý ngôn ngữ tự nhiên và học không giám sát '
                     'techniques &#151; click on the *__How this app works?__* button to know more!')
         st.text('')
-        st.warning(':point_left: Select a game from the dropdown menu!')
+        st.warning(':point_left: Chọn 1 game từ menu!')
