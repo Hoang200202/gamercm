@@ -6,7 +6,7 @@ import textwrap
 # Load and Cache the data
 @st.cache_data(persist=True)
 def getdata():
-    games_df = pd.read_csv("Games_dataset.csv", index_col=0)
+    games_df = pd.read_csv("Games_dataset2.csv", index_col=0)
     similarity_df = pd.read_csv("sim_matrix.csv", index_col=0)
     return games_df, similarity_df
 
