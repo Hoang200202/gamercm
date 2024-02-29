@@ -52,8 +52,8 @@ if btn:
                 'với mỗi đường link, chúng mình cào thêm dữ liệu về gameplay, nội dung, hoặc cả 2. '
                 'Sau đó chúng mình tạo ra được dataframe:')
     games_df
-    st.markdown('Using [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), '
-                'the text scraping looks like this:')
+    st.markdown('Sử dụng [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), '
+                'văn bản cào được trông như này:')
     st.code("""
 text = ''
     
@@ -113,7 +113,7 @@ tfidf_matrix = tfidf_vectorizer.fit_transform([x for x in games_df["Plots"]])
     st.markdown('## Similarity distance')
 
     st.code("""similarity_distance = 1 - cosine_similarity(tfidf_matrix)""", language='python')
-    st.markdown('From this matrix, we can create a dataframe:')
+    st.markdown('Từ ma trận này, chúng mình tạo thành 1 dataframe:')
     similarity_df
     st.markdown('Sau đó, khi đã chọn được game, ứng dụng sẽ gợi ý ra 5 game tương đồng '
                 'thông qua bảng này.')
