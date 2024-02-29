@@ -53,7 +53,7 @@ if btn:
                 'Sau đó chúng mình tạo ra được dataframe:')
     games_df
     st.markdown('Sử dụng [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), '
-                'văn bản cào được trông như này:')
+                'để thu thập văn bản:')
     st.code("""
 text = ''
     
