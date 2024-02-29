@@ -17,10 +17,11 @@ st.sidebar.markdown('__Nintendo Switch game recommender__  \n Bài tập của n
                     'Nông Minh Đức - Trịnh Việt Hoàng  \n'
                     )
 st.sidebar.image('banner2.jpg', use_column_width=True)
-st.sidebar.markdown('# Chọn game của bạn!')
+st.sidebar.markdown('# Chọn game bạn muốn!  \n'
+                    'Ứng dụng sẽ gợi ý cho bạn 5 game có nội dung tương tự!')
 st.sidebar.markdown('')
 ph = st.sidebar.empty()
-selected_game = ph.selectbox('Chọn 1 trong 787 game của Nintendo '
+selected_game = ph.selectbox('Chọn 1 trong 787 game của Nintendo Switch '
                              'từ menu: (bạn có thể nhập tên game ở đây)',
                              [''] + games_df['Title'].to_list(), key='default',
                              format_func=lambda x: 'Select a game' if x == '' else x)
@@ -39,8 +40,8 @@ if btn:
 
     st.markdown('# How does this app work?')
     st.markdown('---')
-    st.markdown('The recommendation system used in this app employs a series of algorithms based '
-                'on unsupervised learning techniques.')
+    st.markdown('Hệ thống gợi ý này sử dụng những thuật toán dựa trên '
+                'các kĩ thuật học không giám sát.')
 
     # Phần cào dữ liệu
     st.markdown('## Web scraping')
@@ -145,13 +146,13 @@ else:
     else:
         st.markdown('# Nintendo Switch game recommender')
         st.text('')
-        st.markdown('> _Bạn có trên tay Nintendo Switch, chơi xong 1 con game thú vị '
-                    'và muốn gợi ý 1 game tương tự?_')
+        st.markdown('> _Bạn có trên tay Nintendo Switch, phá đảo 1 con game thú vị '
+                    'và muốn gợi ý những game tương tự?_')
         st.text('')
         st.markdown("Trang web này sẽ gợi ý cho bạn 5 game của Nintendo "
                     'dựa trên nội dung, gameplay và những điều tương đồng khác để bạn chọn lựa!')
-        st.markdown('Thuật toán dựa trên xử lý ngôn ngữ tự nhiên và kĩ thuật học không giám sát '
-                    '; bấm *__Chi tiết?__* để biết thêm!')
+        st.markdown('Thuật toán dựa trên xử lý ngôn ngữ tự nhiên và kĩ thuật học không giám sát \n'
+                    ' Bấm *__Chi tiết__* để biết thêm!')
         st.text('')
         st.warning(':point_left: Chọn 1 game từ menu!')
         st.markdown('Một số game nổi bật: ')
