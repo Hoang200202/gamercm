@@ -157,4 +157,9 @@ else:
         st.markdown('Một số game nổi bật: ')
         st.text('')
         st.markdown("[![Game1](https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg)](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild)")
-        
+        st.markdown("[![Game2](https://upload.wikimedia.org/wikipedia/en/b/b1/Bayonetta_2_box_artwork.png)](https://en.wikipedia.org/wiki/Bayonetta_2)")
+        st.markdown("[![Game3](https://upload.wikimedia.org/wikipedia/en/6/65/Kirby_Star_Allies.jpg)](https://en.wikipedia.org/wiki/Kirby_Star_Allies)")
+        st.markdown("[![Game4](https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg)](https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate)")
+        st.markdown("[![Game5](https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Pokemon_Brilliant_Diamond_Shining_Pearl.png/330px-Pokemon_Brilliant_Diamond_Shining_Pearl.png)](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Brilliant_Diamond_and_Shining_Pearl)")
+        st.markdown("[![Game6](https://upload.wikimedia.org/wikipedia/en/7/76/Xenoblade_3.png)](https://en.wikipedia.org/wiki/Xenoblade_Chronicles_3)")
+        st.markdown("[![Game7](https://upload.wikimedia.org/wikipedia/en/8/8a/Fitness_Boxing.jpg)](https://en.wikipedia.org/wiki/Fitness_Boxing)")
