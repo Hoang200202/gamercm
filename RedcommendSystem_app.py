@@ -154,3 +154,7 @@ else:
                     '; bấm *__Chi tiết?__* để biết thêm!')
         st.text('')
         st.warning(':point_left: Chọn 1 game từ menu!')
+        st.markdown('Một số game nổi bật: ')
+        st.text('')
+        st.markdown("[![Foo](banner.png)](http://google.com.au/)")
+        
