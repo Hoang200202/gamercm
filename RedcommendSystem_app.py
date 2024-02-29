@@ -156,5 +156,5 @@ else:
         st.warning(':point_left: Chọn 1 game từ menu!')
         st.markdown('Một số game nổi bật: ')
         st.text('')
-        st.markdown("[![Game1](http://www.google.com.au/images/nav_logo7.png)](http://google.com.au/)")
+        st.markdown("[![Game1](https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg)](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild)")
         
