@@ -156,14 +156,12 @@ else:
         st.warning(':point_left: Chọn 1 game từ menu!')
         st.markdown('Một số game nổi bật: ')
         st.text('')
-        col1, col2 = st.beta_columns(2)
-        with col1:
-            st.markdown("[![Game1](https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg)](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild)")
-            st.markdown("[![Game2](https://upload.wikimedia.org/wikipedia/en/b/b1/Bayonetta_2_box_artwork.png)](https://en.wikipedia.org/wiki/Bayonetta_2)")
-            st.markdown("[![Game3](https://upload.wikimedia.org/wikipedia/en/6/65/Kirby_Star_Allies.jpg)](https://en.wikipedia.org/wiki/Kirby_Star_Allies)")
-            st.markdown("[![Game4](https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg)](https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate)")
-            st.markdown("[![Game5](https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Pokemon_Brilliant_Diamond_Shining_Pearl.png/330px-Pokemon_Brilliant_Diamond_Shining_Pearl.png)](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Brilliant_Diamond_and_Shining_Pearl)")
-            st.markdown("[![Game6](https://upload.wikimedia.org/wikipedia/en/7/76/Xenoblade_3.png)](https://en.wikipedia.org/wiki/Xenoblade_Chronicles_3)")
-            st.markdown("[![Game7](https://upload.wikimedia.org/wikipedia/en/8/8a/Fitness_Boxing.jpg)](https://en.wikipedia.org/wiki/Fitness_Boxing)")
-        with col2:
-            st.write("The Legend of Zelda: Breath of the Wild[b] is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U. Set at the end of the Zelda timeline, the player controls an amnesiac Link as he sets out to save Princess Zelda and prevent Calamity Ganon from destroying the world. Players explore the open world of Hyrule while they collect items and complete objectives such as puzzles or side quests. Breath of the Wild's world is unstructured and encourages exploration and experimentation; the story can be completed in a nonlinear fashion.")
+        st.markdown("[![Game1](https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg)](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild)")
+        st.markdown("[![Game2](https://upload.wikimedia.org/wikipedia/en/b/b1/Bayonetta_2_box_artwork.png)](https://en.wikipedia.org/wiki/Bayonetta_2)")
+        st.markdown("[![Game3](https://upload.wikimedia.org/wikipedia/en/6/65/Kirby_Star_Allies.jpg)](https://en.wikipedia.org/wiki/Kirby_Star_Allies)")
+        st.markdown("[![Game4](https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg)](https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate)")
+        st.markdown("[![Game5](https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Pokemon_Brilliant_Diamond_Shining_Pearl.png/330px-Pokemon_Brilliant_Diamond_Shining_Pearl.png)](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Brilliant_Diamond_and_Shining_Pearl)")
+        st.markdown("[![Game6](https://upload.wikimedia.org/wikipedia/en/7/76/Xenoblade_3.png)](https://en.wikipedia.org/wiki/Xenoblade_Chronicles_3)")
+        st.markdown("[![Game7](https://upload.wikimedia.org/wikipedia/en/8/8a/Fitness_Boxing.jpg)](https://en.wikipedia.org/wiki/Fitness_Boxing)")
+
+            
