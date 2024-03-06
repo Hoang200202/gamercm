@@ -14,7 +14,7 @@ games_df, similarity_df = getdata()[0], getdata()[1]
 
 # Sidebar
 st.sidebar.markdown('__Nintendo Switch game recommender__  \n Bài tập của nhóm 4  \n'
-                    'Lê Duy Quang - Trịnh Việt Hoàng  \n'
+            
                     'Nguyễn Đức Hậu - Tạ Hữu Huy Hoàng ' 
                     )
 st.sidebar.image('banner2.jpg', use_column_width=True)
