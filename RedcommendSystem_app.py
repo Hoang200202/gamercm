@@ -17,8 +17,7 @@ def getdata():
 games_df, similarity_df = getdata()[0], getdata()[1]
     
     # Sidebar
-    authenticator.logout("Log out","sidebar")
-    st.sidebar.title(f"Welcome {name}")
+  
     st.sidebar.markdown('__Nintendo Switch game recommender__  \n Bài tập của nhóm 4  \n'
                 
                         'Nông Minh Đức - Trịnh Việt Hoàng' 
