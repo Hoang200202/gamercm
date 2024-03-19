@@ -158,9 +158,9 @@ if selected_game:
    
 
 else:
-if btn:
-    pass
-else:
+    if btn:
+        pass
+    else:
         st.markdown('# Website giới thiệu và gợi ý game')
         st.text('')
         st.markdown('> _Bạn có trên tay Nintendo Switch, phá đảo 1 con game thú vị '
