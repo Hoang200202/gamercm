@@ -133,28 +133,28 @@ tfidf_matrix = tfidf_vectorizer.fit_transform([x for x in games_df["Plots"]])
 
 if selected_game:
 
-link = 'https://en.wikipedia.org' + games_df[games_df.Title == selected_game].Link.values[0]
-plots= games_df[games_df.Title == selected_game].Plots.values[0]
-
-# DF query
-matches = similarity_df[selected_game].sort_values()[1:6]
-matches = matches.index.tolist()
-matches = games_df.set_index('Title').loc[matches]
-matches.reset_index(inplace=True)
-
-# Results
-cols = ['Genre', 'Developer', 'Publisher', 'Released in: Japan', 'North America', 'Rest of countries']
-
-st.markdown("# The recommended games for [{}]({}): \n {} ".format(selected_game, link, plots))
-for idx, row in matches.iterrows():
-    st.markdown('### {} - {}'.format(str(idx + 1), row['Title']))
-
-    st.markdown(
-        '{} [[...]](https://en.wikipedia.org{})'.format(textwrap.wrap(row['Plots'][0:], 1000)[0], row['Link']))
-    st.table(pd.DataFrame(row[cols]).T.set_index('Genre'))
-    st.markdown('Link to wiki page: [{}](https://en.wikipedia.org{})'.format(row['Title'], row['Link']))
-
-    # Hiển thị ảnh từ đường liên kết trong cột 'image'
+    link = 'https://en.wikipedia.org' + games_df[games_df.Title == selected_game].Link.values[0]
+    plots= games_df[games_df.Title == selected_game].Plots.values[0]
+    
+    # DF query
+    matches = similarity_df[selected_game].sort_values()[1:6]
+    matches = matches.index.tolist()
+    matches = games_df.set_index('Title').loc[matches]
+    matches.reset_index(inplace=True)
+    
+    # Results
+    cols = ['Genre', 'Developer', 'Publisher', 'Released in: Japan', 'North America', 'Rest of countries']
+    
+    st.markdown("# The recommended games for [{}]({}): \n {} ".format(selected_game, link, plots))
+    for idx, row in matches.iterrows():
+        st.markdown('### {} - {}'.format(str(idx + 1), row['Title']))
+    
+        st.markdown(
+            '{} [[...]](https://en.wikipedia.org{})'.format(textwrap.wrap(row['Plots'][0:], 1000)[0], row['Link']))
+        st.table(pd.DataFrame(row[cols]).T.set_index('Genre'))
+        st.markdown('Link to wiki page: [{}](https://en.wikipedia.org{})'.format(row['Title'], row['Link']))
+    
+        # Hiển thị ảnh từ đường liên kết trong cột 'image'
    
 
 else:
