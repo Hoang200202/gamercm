@@ -144,7 +144,7 @@ if selected_game:
     # Results
     cols = ['Genre', 'Developer', 'Publisher', 'Released in: Japan', 'North America', 'Rest of countries']
     
-    st.markdown("# The recommended games for [{}]({}): \n {} ".format(selected_game, link, plots))
+    st.markdown("# Gợi ý cho [{}]({}): \n Nội dung{} ".format(selected_game, link, plots))
     for idx, row in matches.iterrows():
         st.markdown('### {} - {}'.format(str(idx + 1), row['Title']))
     
