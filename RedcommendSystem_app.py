@@ -144,14 +144,14 @@ if selected_game:
     # Results
     cols = ['Genre', 'Developer', 'Publisher', 'Released in: Japan', 'North America', 'Rest of countries']
     
-    st.markdown("# Gợi ý cho [{}]({}): \n Nội dung{} ".format(selected_game, link, plots))
+    st.markdown("# Gợi ý cho [{}]({}): \n Nội dung: {} ".format(selected_game, link, plots))
     for idx, row in matches.iterrows():
         st.markdown('### {} - {}'.format(str(idx + 1), row['Title']))
     
         st.markdown(
             '{} [[...]](https://en.wikipedia.org{})'.format(textwrap.wrap(row['Plots'][0:], 1000)[0], row['Link']))
         st.table(pd.DataFrame(row[cols]).T.set_index('Genre'))
-        st.markdown('Link to wiki page: [{}](https://en.wikipedia.org{})'.format(row['Title'], row['Link']))
+        st.markdown('Link đến trang chủ: [{}](https://en.wikipedia.org{})'.format(row['Title'], row['Link']))
     
         # Hiển thị ảnh từ đường liên kết trong cột 'image'
    
